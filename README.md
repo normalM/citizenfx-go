@@ -1,1 +1,1 @@
-"# citizenfx-go" 
+# citizenfx-go
