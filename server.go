@@ -17,9 +17,7 @@ import "syscall/js"
  * @param height The height of the blip.
  * @return A handle to the blip.
  */
-func (_server) AddBlipForArea(x float64, y float64, z float64, width float64, height float64) float64 {
-	return 0.0
-}
+func (_server) AddBlipForArea(x float64, y float64, z float64, width float64, height float64) float64
 
 /**
  * Creates a blip for the specified coordinates. You can use `SET_BLIP_` natives to change the blip.
@@ -28,9 +26,7 @@ func (_server) AddBlipForArea(x float64, y float64, z float64, width float64, he
  * @param z The Z coordinate.
  * @return A blip handle.
  */
-func (_server) AddBlipForCoord(x float64, y float64, z float64) float64 {
-	return 0.0
-}
+func (_server) AddBlipForCoord(x float64, y float64, z float64) float64
 
 /**
  * Returns red ( default ) blip attached to entity.
@@ -39,13 +35,9 @@ func (_server) AddBlipForCoord(x float64, y float64, z float64) float64 {
  * blip = HUD::ADD_BLIP_FOR_ENTITY(YourPedOrBodyguardName);
  * HUD::SET_BLIP_AS_FRIENDLY(blip, true);
  */
-func (_server) AddBlipForEntity(entity float64) float64 {
-	return 0.0
-}
+func (_server) AddBlipForEntity(entity float64) float64
 
-func (_server) AddBlipForRadius(posX float64, posY float64, posZ float64, radius float64) float64 {
-	return 0.0
-}
+func (_server) AddBlipForRadius(posX float64, posY float64, posZ float64, radius float64) float64
 
 /**
  * Applies an Item from a PedDecorationCollection to a ped. These include tattoos and shirt decals.
@@ -71,7 +63,7 @@ func (_server) AddBlipForRadius(posX float64, posY float64, posZ float64, radius
  * Code:
  * PED::_0x5F5D1665E352A839(PLAYER::PLAYER_PED_ID(), MISC::GET_HASH_KEY("mpbeach_overlays"), MISC::GET_HASH_KEY("fm_hair_fuzz"))
  */
-func (_server) AddPedDecorationFromHashes(ped float64, collection interface{}, overlay interface{}) {}
+func (_server) AddPedDecorationFromHashes(ped float64, collection interface{}, overlay interface{})
 
 /**
  * Adds a handler for changes to a state bag.
@@ -92,9 +84,7 @@ func (_server) AddPedDecorationFromHashes(ped float64, collection interface{}, o
  * @param handler The handler function.
  * @return A cookie to remove the change handler.
 */
-func (_server) AddStateBagChangeHandler(keyFilter string, bagFilter string, handler js.Func) float64 {
-	return 0.0
-}
+func (_server) AddStateBagChangeHandler(keyFilter string, bagFilter string, handler js.Func) float64
 
 /**
  * Applies a force to the specified entity.
@@ -126,8 +116,7 @@ func (_server) AddStateBagChangeHandler(keyFilter string, bagFilter string, hand
  * @param p12 (Usually false)
  * @param p13 (Usually true)
  */
-func (_server) ApplyForceToEntity(entity float64, forceType float64, x float64, y float64, z float64, offX float64, offY float64, offZ float64, boneIndex float64, isDirectionRel bool, ignoreUpVec bool, isForceRel bool, p12 bool, p13 bool) {
-}
+func (_server) ApplyForceToEntity(entity float64, forceType float64, x float64, y float64, z float64, offX float64, offY float64, offZ float64, boneIndex float64, isDirectionRel bool, ignoreUpVec bool, isForceRel bool, p12 bool, p13 bool)
 
 /**
  * Returns whether or not the specified player has enough information to start a commerce session for.
@@ -139,28 +128,28 @@ func (_server) CanPlayerStartCommerceSession(playerSrc string) bool
 /**
  * Cancels the currently executing event.
  */
-func (_server) CancelEvent() {}
+func (_server) CancelEvent()
 
 /**
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  */
-func (_server) ClearPedProp(ped float64, propId float64) {}
+func (_server) ClearPedProp(ped float64, propId float64)
 
-func (_server) ClearPedSecondaryTask(ped float64) {}
+func (_server) ClearPedSecondaryTask(ped float64)
 
-func (_server) ClearPedTasks(ped float64) {}
+func (_server) ClearPedTasks(ped float64)
 
 /**
  * Immediately stops the pedestrian from whatever it's doing. They stop fighting, animations, etc. they forget what they were doing.
  */
-func (_server) ClearPedTasksImmediately(ped float64) {}
+func (_server) ClearPedTasksImmediately(ped float64)
 
 /**
  * This executes at the same as speed as PLAYER::SET_PLAYER_WANTED_LEVEL(player, 0, false);
  * PLAYER::GET_PLAYER_WANTED_LEVEL(player); executes in less than half the time. Which means that it's worth first checking if the wanted level needs to be cleared before clearing. However, this is mostly about good code practice and can important in other situations. The difference in time in this example is negligible.
  */
-func (_server) ClearPlayerWantedLevel(player string) {}
+func (_server) ClearPlayerWantedLevel(player string)
 
 /**
  * Creates an object (prop) with the specified model at the specified position, offset on the Z axis by the radius of the object's model.
@@ -174,9 +163,7 @@ func (_server) ClearPlayerWantedLevel(player string) {}
  * @param doorFlag False to create a door archetype (archetype flag bit 26 set) as a door. Required to be set to true to create door models in network mode.
  * @return A script handle (fwScriptGuid index) for the object, or `0` if the object failed to be created.
  */
-func (_server) CreateObject(modelHash interface{}, x float64, y float64, z float64, isNetwork bool, netMissionEntity bool, doorFlag bool) float64 {
-	return 0.0
-}
+func (_server) CreateObject(modelHash interface{}, x float64, y float64, z float64, isNetwork bool, netMissionEntity bool, doorFlag bool) float64
 
 /**
  * Creates an object (prop) with the specified model centered at the specified position.
@@ -190,9 +177,7 @@ func (_server) CreateObject(modelHash interface{}, x float64, y float64, z float
  * @param doorFlag False to create a door archetype (archetype flag bit 26 set) as a door. Required to be set to true to create door models in network mode.
  * @return A script handle (fwScriptGuid index) for the object, or `0` if the object failed to be created.
  */
-func (_server) CreateObjectNoOffset(modelHash interface{}, x float64, y float64, z float64, isNetwork bool, netMissionEntity bool, doorFlag bool) float64 {
-	return 0.0
-}
+func (_server) CreateObjectNoOffset(modelHash interface{}, x float64, y float64, z float64, isNetwork bool, netMissionEntity bool, doorFlag bool) float64
 
 /**
  * Creates a ped (biped character, pedestrian, actor) with the specified model at the specified position and heading.
@@ -208,13 +193,9 @@ func (_server) CreateObjectNoOffset(modelHash interface{}, x float64, y float64,
  * @param bScriptHostPed Whether to register the ped as pinned to the script host in the R\* network model.
  * @return A script handle (fwScriptGuid index) for the ped, or `0` if the ped failed to be created.
  */
-func (_server) CreatePed(pedType float64, modelHash interface{}, x float64, y float64, z float64, heading float64, isNetwork bool, bScriptHostPed bool) float64 {
-	return 0.0
-}
+func (_server) CreatePed(pedType float64, modelHash interface{}, x float64, y float64, z float64, heading float64, isNetwork bool, bScriptHostPed bool) float64
 
-func (_server) CreatePedInsideVehicle(vehicle float64, pedType float64, modelHash interface{}, seat float64, isNetwork bool, bScriptHostPed bool) float64 {
-	return 0.0
-}
+func (_server) CreatePedInsideVehicle(vehicle float64, pedType float64, modelHash interface{}, seat float64, isNetwork bool, bScriptHostPed bool) float64
 
 /**
  * Creates a vehicle with the specified model at the specified position. This vehicle will initially be owned by the creating
@@ -231,25 +212,23 @@ func (_server) CreatePedInsideVehicle(vehicle float64, pedType float64, modelHas
  * @param netMissionEntity Whether to register the vehicle as pinned to the script host in the R\* network model.
  * @return A script handle (fwScriptGuid index) for the vehicle, or `0` if the vehicle failed to be created.
  */
-func (_server) CreateVehicle(modelHash interface{}, x float64, y float64, z float64, heading float64, isNetwork bool, netMissionEntity bool) float64 {
-	return 0.0
-}
+func (_server) CreateVehicle(modelHash interface{}, x float64, y float64, z float64, heading float64, isNetwork bool, netMissionEntity bool) float64
 
 /**
  * Deletes the specified entity.
  * @param entity The entity to delete.
  */
-func (_server) DeleteEntity(entity float64) {}
+func (_server) DeleteEntity(entity float64)
 
-func (_server) DeleteFunctionReference(referenceIdentity string) {}
+func (_server) DeleteFunctionReference(referenceIdentity string)
 
-func (_server) DeleteResourceKvp(key string) {}
+func (_server) DeleteResourceKvp(key string)
 
 /**
  * Nonsynchronous [DELETE_RESOURCE_KVP](#\_0x7389B5DF) operation; see [FLUSH_RESOURCE_KVP](#\_0x5240DA5A).
  * @param key The key to delete
  */
-func (_server) DeleteResourceKvpNoSync(key string) {}
+func (_server) DeleteResourceKvpNoSync(key string)
 
 func (_server) DoesEntityExist(entity float64) bool
 
@@ -269,41 +248,39 @@ func (_server) DoesPlayerOwnSku(playerSrc string, skuId float64) bool
  */
 func (_server) DoesPlayerOwnSkuExt(playerSrc string, skuId float64) bool
 
-func (_server) DropPlayer(playerSrc string, reason string) {}
+func (_server) DropPlayer(playerSrc string, reason string)
 
 func (_server) DuplicateFunctionReference(referenceIdentity string) string
 
-func (_server) EnableEnhancedHostSupport(enabled bool) {}
+func (_server) EnableEnhancedHostSupport(enabled bool)
 
-func (_server) EndFindKvp(handle float64) {}
+func (_server) EndFindKvp(handle float64)
 
 /**
  * Internal function for ensuring an entity has a state bag.
  */
-func (_server) EnsureEntityStateBag(entity float64) {}
+func (_server) EnsureEntityStateBag(entity float64)
 
-func (_server) ExecuteCommand(commandString string) {}
+func (_server) ExecuteCommand(commandString string)
 
 func (_server) FindKvp(handle float64) string
 
-func (_server) FlagServerAsPrivate(private_ bool) {}
+func (_server) FlagServerAsPrivate(private_ bool)
 
 /**
  * Nonsynchronous operations will not wait for a disk/filesystem flush before returning from a write or delete call. They will be much faster than their synchronous counterparts (e.g., bulk operations), however, a system crash may lose the data to some recent operations.
  * This native ensures all `_NO_SYNC` operations are synchronized with the disk/filesystem.
  */
-func (_server) FlushResourceKvp() {}
+func (_server) FlushResourceKvp()
 
 /**
  * Freezes or unfreezes an entity preventing its coordinates to change by the player if set to `true`. You can still change the entity position using SET_ENTITY_COORDS.
  * @param entity The entity to freeze/unfreeze.
  * @param toggle Freeze or unfreeze entity.
  */
-func (_server) FreezeEntityPosition(entity float64, toggle bool) {}
+func (_server) FreezeEntityPosition(entity float64, toggle bool)
 
-func (_server) GetAirDragMultiplierForPlayersVehicle(playerSrc string) float64 {
-	return 0.0
-}
+func (_server) GetAirDragMultiplierForPlayersVehicle(playerSrc string) float64
 
 /**
  * Returns all object handles known to the server.
@@ -313,9 +290,7 @@ func (_server) GetAirDragMultiplierForPlayersVehicle(playerSrc string) float64 {
  * ```
  * @return An object containing a list of object handles.
  */
-func (_server) GetAllObjects() interface{} {
-	return 0.0
-}
+func (_server) GetAllObjects() interface{}
 
 /**
  * Returns all peds handles known to the server.
@@ -325,9 +300,7 @@ func (_server) GetAllObjects() interface{} {
  * ```
  * @return An object containing a list of peds handles.
  */
-func (_server) GetAllPeds() interface{} {
-	return 0.0
-}
+func (_server) GetAllPeds() interface{}
 
 /**
  * Returns all vehicle handles known to the server.
@@ -337,13 +310,9 @@ func (_server) GetAllPeds() interface{} {
  * ```
  * @return An object containing a list of vehicle handles.
  */
-func (_server) GetAllVehicles() interface{} {
-	return 0.0
-}
+func (_server) GetAllVehicles() interface{}
 
-func (_server) GetBlipSprite(self float64) float64 {
-	return 0.0
-}
+func (_server) GetBlipSprite(self float64) float64
 
 /**
  * Returns the current console output buffer.
@@ -353,9 +322,7 @@ func (_server) GetConsoleBuffer() string
 
 func (_server) GetConvar(varName string, default_ string) string
 
-func (_server) GetConvarInt(varName string, default_ float64) float64 {
-	return 0.0
-}
+func (_server) GetConvarInt(varName string, default_ float64) float64
 
 /**
  * Returns the name of the currently executing resource.
@@ -369,29 +336,21 @@ func (_server) GetCurrentResourceName() string
  * @param entity The entity to get the coordinates from.
  * @return The current entity coordinates.
  */
-func (_server) GetEntityCoords(entity float64) []float64 { return []float64{0.0} }
+func (_server) GetEntityCoords(entity float64) []float64
 
-func (_server) GetEntityHeading(entity float64) float64 {
-	return 0.0
-}
+func (_server) GetEntityHeading(entity float64) float64
 
 /**
  * Currently it only works with peds.
  */
-func (_server) GetEntityHealth(entity float64) float64 {
-	return 0.0
-}
+func (_server) GetEntityHealth(entity float64) float64
 
 /**
  * Currently it only works with peds.
  */
-func (_server) GetEntityMaxHealth(entity float64) float64 {
-	return 0.0
-}
+func (_server) GetEntityMaxHealth(entity float64) float64
 
-func (_server) GetEntityModel(entity float64) float64 {
-	return 0.0
-}
+func (_server) GetEntityModel(entity float64) float64
 
 /**
  * This native gets an entity's population type.
@@ -413,13 +372,11 @@ enum ePopulationType
 };
 ```
 */
-func (_server) GetEntityPopulationType(entity float64) float64 {
-	return 0.0
-}
+func (_server) GetEntityPopulationType(entity float64) float64
 
-func (_server) GetEntityRotation(entity float64) []float64 { return []float64{0.0} }
+func (_server) GetEntityRotation(entity float64) []float64
 
-func (_server) GetEntityRotationVelocity(entity float64) []float64 { return []float64{0.0} }
+func (_server) GetEntityRotationVelocity(entity float64) []float64
 
 /**
  * Gets the routing bucket for the specified entity.
@@ -427,9 +384,7 @@ func (_server) GetEntityRotationVelocity(entity float64) []float64 { return []fl
  * @param entity The entity to get the routing bucket for.
  * @return The routing bucket ID.
  */
-func (_server) GetEntityRoutingBucket(entity float64) float64 {
-	return 0.0
-}
+func (_server) GetEntityRoutingBucket(entity float64) float64
 
 func (_server) GetEntityScript(entity float64) string
 
@@ -442,15 +397,11 @@ func (_server) GetEntityScript(entity float64) string
  * @param entity The entity to get the speed of
  * @return The speed of the entity in meters per second
  */
-func (_server) GetEntitySpeed(entity float64) float64 {
-	return 0.0
-}
+func (_server) GetEntitySpeed(entity float64) float64
 
-func (_server) GetEntityType(entity float64) float64 {
-	return 0.0
-}
+func (_server) GetEntityType(entity float64) float64
 
-func (_server) GetEntityVelocity(entity float64) []float64 { return []float64{0.0} }
+func (_server) GetEntityVelocity(entity float64) []float64
 
 /**
  * Returns the internal build number of the current game being executed.
@@ -470,9 +421,7 @@ func (_server) GetEntityVelocity(entity float64) []float64 { return []float64{0.
  * *   0
  * @return The build number, or **0** if no build number is known.
  */
-func (_server) GetGameBuildNumber() float64 {
-	return 0.0
-}
+func (_server) GetGameBuildNumber() float64
 
 /**
  * Returns the current game being executed.
@@ -491,22 +440,16 @@ func (_server) GetGameName() string
  * Gets the current game timer in milliseconds.
  * @return The game time.
  */
-func (_server) GetGameTimer() float64 {
-	return 0.0
-}
+func (_server) GetGameTimer() float64
 
 /**
  * This native converts the passed string to a hash.
  */
-func (_server) GetHashKey(model string) float64 {
-	return 0.0
-}
+func (_server) GetHashKey(model string) float64
 
 func (_server) GetHostId() string
 
-func (_server) GetInstanceId() float64 {
-	return 0.0
-}
+func (_server) GetInstanceId() float64
 
 func (_server) GetInvokingResource() string
 
@@ -521,9 +464,7 @@ func (_server) GetIsVehicleSecondaryColourCustom(vehicle float64) bool
  * @param vehicle The vehicle to check.
  * @return The current state of the vehicles landing gear.
  */
-func (_server) GetLandingGearState(vehicle float64) float64 {
-	return 0.0
-}
+func (_server) GetLandingGearState(vehicle float64) float64
 
 /**
  * Seat indexes:
@@ -538,21 +479,13 @@ func (_server) GetLandingGearState(vehicle float64) float64 {
  * @param index The seat index.
  * @return The last ped in the specified seat of the passed vehicle. Returns 0 if the specified seat was never occupied or the last ped does not exist anymore.
  */
-func (_server) GetLastPedInVehicleSeat(vehicle float64, index float64) float64 {
-	return 0.0
-}
+func (_server) GetLastPedInVehicleSeat(vehicle float64, index float64) float64
 
-func (_server) GetNumPlayerIdentifiers(playerSrc string) float64 {
-	return 0.0
-}
+func (_server) GetNumPlayerIdentifiers(playerSrc string) float64
 
-func (_server) GetNumPlayerIndices() float64 {
-	return 0.0
-}
+func (_server) GetNumPlayerIndices() float64
 
-func (_server) GetNumPlayerTokens(playerSrc string) float64 {
-	return 0.0
-}
+func (_server) GetNumPlayerTokens(playerSrc string) float64
 
 /**
  * Gets the amount of metadata values with the specified key existing in the specified resource's manifest.
@@ -560,27 +493,17 @@ func (_server) GetNumPlayerTokens(playerSrc string) float64 {
  * @param resourceName The resource name.
  * @param metadataKey The key to look up in the resource manifest.
  */
-func (_server) GetNumResourceMetadata(resourceName string, metadataKey string) float64 {
-	return 0.0
-}
+func (_server) GetNumResourceMetadata(resourceName string, metadataKey string) float64
 
-func (_server) GetNumResources() float64 {
-	return 0.0
-}
+func (_server) GetNumResources() float64
 
 func (_server) GetPasswordHash(password string) string
 
-func (_server) GetPedArmour(ped float64) float64 {
-	return 0.0
-}
+func (_server) GetPedArmour(ped float64) float64
 
-func (_server) GetPedCauseOfDeath(ped float64) float64 {
-	return 0.0
-}
+func (_server) GetPedCauseOfDeath(ped float64) float64
 
-func (_server) GetPedDesiredHeading(ped float64) float64 {
-	return 0.0
-}
+func (_server) GetPedDesiredHeading(ped float64) float64
 
 /**
  * Seat indexes:
@@ -595,49 +518,37 @@ func (_server) GetPedDesiredHeading(ped float64) float64 {
  * @param index The seat index.
  * @return The ped in the specified seat of the passed vehicle. Returns 0 if the specified seat is not occupied.
  */
-func (_server) GetPedInVehicleSeat(vehicle float64, index float64) float64 {
-	return 0.0
-}
+func (_server) GetPedInVehicleSeat(vehicle float64, index float64) float64
 
-func (_server) GetPedMaxHealth(ped float64) float64 {
-	return 0.0
-}
+func (_server) GetPedMaxHealth(ped float64) float64
 
 /**
  * Gets the script task command currently assigned to the ped.
  * @param ped The target ped.
  * @return The script task command currently assigned to the ped. A value of 0x811E343C denotes no script task is assigned.
  */
-func (_server) GetPedScriptTaskCommand(ped float64) float64 {
-	return 0.0
-}
+func (_server) GetPedScriptTaskCommand(ped float64) float64
 
 /**
  * Gets the stage of the peds scripted task.
  * @param ped The target ped.
  * @return The stage of the ped's scripted task. A value of 3 denotes no script task is assigned.
  */
-func (_server) GetPedScriptTaskStage(ped float64) float64 {
-	return 0.0
-}
+func (_server) GetPedScriptTaskStage(ped float64) float64
 
 /**
  * Get the last entity that damaged the ped. This native is used server side when using OneSync.
  * @param ped The target ped
  * @return The entity id. Returns 0 if the ped has not been damaged recently.
  */
-func (_server) GetPedSourceOfDamage(ped float64) float64 {
-	return 0.0
-}
+func (_server) GetPedSourceOfDamage(ped float64) float64
 
 /**
  * Get the entity that killed the ped. This native is used server side when using OneSync.
  * @param ped The target ped
  * @return The entity id. Returns 0 if the ped has no killer.
  */
-func (_server) GetPedSourceOfDeath(ped float64) float64 {
-	return 0.0
-}
+func (_server) GetPedSourceOfDeath(ped float64) float64
 
 /**
  * Gets the type of a ped's specific task given an index of the CPedTaskSpecificDataNode nodes.
@@ -648,16 +559,14 @@ func (_server) GetPedSourceOfDeath(ped float64) float64 {
 1604: A value of 530 denotes no script task is assigned or an invalid input was given.
 2060+: A value of 531 denotes no script task is assigned or an invalid input was given.
 */
-func (_server) GetPedSpecificTaskType(ped float64, index float64) float64 {
-	return 0.0
-}
+func (_server) GetPedSpecificTaskType(ped float64, index float64) float64
 
 /**
  * Gets the current camera rotation for a specified player. This native is used server side when using OneSync.
  * @param playerSrc The player handle.
  * @return The player's camera rotation. Values are in radians.
  */
-func (_server) GetPlayerCameraRotation(playerSrc string) []float64 { return []float64{0.0} }
+func (_server) GetPlayerCameraRotation(playerSrc string) []float64
 
 func (_server) GetPlayerEndpoint(playerSrc string) string
 
@@ -666,9 +575,7 @@ func (_server) GetPlayerEndpoint(playerSrc string) string
  * @param playerSrc The target player
  * @return The fake wanted level
  */
-func (_server) GetPlayerFakeWantedLevel(playerSrc string) float64 {
-	return 0.0
-}
+func (_server) GetPlayerFakeWantedLevel(playerSrc string) float64
 
 func (_server) GetPlayerFromIndex(index float64) string
 
@@ -678,36 +585,24 @@ func (_server) GetPlayerIdentifier(playerSrc string, identifier float64) string
 
 func (_server) GetPlayerInvincible(playerSrc string) bool
 
-func (_server) GetPlayerLastMsg(playerSrc string) float64 {
-	return 0.0
-}
+func (_server) GetPlayerLastMsg(playerSrc string) float64
 
-func (_server) GetPlayerMaxArmour(playerSrc string) float64 {
-	return 0.0
-}
+func (_server) GetPlayerMaxArmour(playerSrc string) float64
 
-func (_server) GetPlayerMaxHealth(playerSrc string) float64 {
-	return 0.0
-}
+func (_server) GetPlayerMaxHealth(playerSrc string) float64
 
 /**
  * A getter for [SET_PLAYER_MELEE_WEAPON_DAMAGE_MODIFIER](#\_0x4A3DC7ECCC321032).
  * @param playerId The player index.
  * @return Returns player melee weapon damage modifier value.
  */
-func (_server) GetPlayerMeleeWeaponDamageModifier(playerId string) float64 {
-	return 0.0
-}
+func (_server) GetPlayerMeleeWeaponDamageModifier(playerId string) float64
 
 func (_server) GetPlayerName(playerSrc string) string
 
-func (_server) GetPlayerPed(playerSrc string) float64 {
-	return 0.0
-}
+func (_server) GetPlayerPed(playerSrc string) float64
 
-func (_server) GetPlayerPing(playerSrc string) float64 {
-	return 0.0
-}
+func (_server) GetPlayerPing(playerSrc string) float64
 
 /**
  * Gets the routing bucket for the specified player.
@@ -715,13 +610,9 @@ func (_server) GetPlayerPing(playerSrc string) float64 {
  * @param playerSrc The player to get the routing bucket for.
  * @return The routing bucket ID.
  */
-func (_server) GetPlayerRoutingBucket(playerSrc string) float64 {
-	return 0.0
-}
+func (_server) GetPlayerRoutingBucket(playerSrc string) float64
 
-func (_server) GetPlayerTeam(playerSrc string) float64 {
-	return 0.0
-}
+func (_server) GetPlayerTeam(playerSrc string) float64
 
 /**
  * Gets the amount of time player has spent evading the cops.
@@ -733,9 +624,7 @@ func (_server) GetPlayerTeam(playerSrc string) float64 {
 Returns 0, if lastPursuit == False and the player has a wanted level, but the pursuit has not started yet
 Otherwise, will return the milliseconds of the pursuit.
 */
-func (_server) GetPlayerTimeInPursuit(playerSrc string, lastPursuit bool) float64 {
-	return 0.0
-}
+func (_server) GetPlayerTimeInPursuit(playerSrc string, lastPursuit bool) float64
 
 /**
  * Gets a player's token. Tokens can be used to enhance banning logic, however are specific to a server.
@@ -750,43 +639,35 @@ func (_server) GetPlayerToken(playerSrc string, index float64) string
  * @param playerSrc The target player
  * @return The player's position known by police. Vector zero if the player has no wanted level.
  */
-func (_server) GetPlayerWantedCentrePosition(playerSrc string) []float64 { return []float64{0.0} }
+func (_server) GetPlayerWantedCentrePosition(playerSrc string) []float64
 
 /**
  * Returns given players wanted level server-side.
  * @param playerSrc The target player
  * @return The wanted level
  */
-func (_server) GetPlayerWantedLevel(playerSrc string) float64 {
-	return 0.0
-}
+func (_server) GetPlayerWantedLevel(playerSrc string) float64
 
 /**
  * A getter for [SET_PLAYER_WEAPON_DAMAGE_MODIFIER](#\_0xCE07B9F7817AADA3).
  * @param playerId The player index.
  * @return The value of player weapon damage modifier.
  */
-func (_server) GetPlayerWeaponDamageModifier(playerId string) float64 {
-	return 0.0
-}
+func (_server) GetPlayerWeaponDamageModifier(playerId string) float64
 
 /**
  * A getter for [SET_PLAYER_WEAPON_DEFENSE_MODIFIER](#\_0x2D83BC011CA14A3C).
  * @param playerId The player index.
  * @return The value of player weapon defense modifier.
  */
-func (_server) GetPlayerWeaponDefenseModifier(playerId string) float64 {
-	return 0.0
-}
+func (_server) GetPlayerWeaponDefenseModifier(playerId string) float64
 
 /**
  * A getter for [\_SET_PLAYER_WEAPON_DEFENSE_MODIFIER\_2](#\_0xBCFDE9EDE4CF27DC).
  * @param playerId The player index.
  * @return The value of player weapon defense modifier 2.
  */
-func (_server) GetPlayerWeaponDefenseModifier_2(playerId string) float64 {
-	return 0.0
-}
+func (_server) GetPlayerWeaponDefenseModifier_2(playerId string) float64
 
 /**
  * Returns all commands that are registered in the command system.
@@ -803,9 +684,7 @@ func (_server) GetPlayerWeaponDefenseModifier_2(playerId string) float64 {
  * ```
  * @return An object containing registered commands.
  */
-func (_server) GetRegisteredCommands() interface{} {
-	return 0.0
-}
+func (_server) GetRegisteredCommands() interface{}
 
 func (_server) GetResourceByFindIndex(findIndex float64) string
 
@@ -814,18 +693,14 @@ func (_server) GetResourceByFindIndex(findIndex float64) string
  * @param key The key to fetch
  * @return A float that contains the value stored in the Kvp or nil/null if none.
  */
-func (_server) GetResourceKvpFloat(key string) float64 {
-	return 0.0
-}
+func (_server) GetResourceKvpFloat(key string) float64
 
 /**
  * A getter for [SET_RESOURCE_KVP_INT](#\_0x6A2B1E8).
  * @param key The key to fetch
  * @return A int that contains the value stored in the Kvp or nil/null if none.
  */
-func (_server) GetResourceKvpInt(key string) float64 {
-	return 0.0
-}
+func (_server) GetResourceKvpInt(key string) float64
 
 /**
  * A getter for [SET_RESOURCE_KVP](#\_0x21C7A35B).
@@ -862,47 +737,29 @@ func (_server) GetResourceState(resourceName string) string
  * @param ped The target ped.
  * @return The weapon hash.
  */
-func (_server) GetSelectedPedWeapon(ped float64) float64 {
-	return 0.0
-}
+func (_server) GetSelectedPedWeapon(ped float64) float64
 
 /**
  * Returns the value of a state bag key.
  * @return Value.
  */
-func (_server) GetStateBagValue(bagName string, key string) interface{} {
-	return 0.0
-}
+func (_server) GetStateBagValue(bagName string, key string) interface{}
 
-func (_server) GetTrainCarriageEngine(train float64) float64 {
-	return 0.0
-}
+func (_server) GetTrainCarriageEngine(train float64) float64
 
-func (_server) GetTrainCarriageIndex(train float64) float64 {
-	return 0.0
-}
+func (_server) GetTrainCarriageIndex(train float64) float64
 
-func (_server) GetVehicleBodyHealth(vehicle float64) float64 {
-	return 0.0
-}
+func (_server) GetVehicleBodyHealth(vehicle float64) float64
 
-func (_server) GetVehicleColours(vehicle float64) (float64, float64) { return 0.0, 0.0 }
+func (_server) GetVehicleColours(vehicle float64) (float64, float64)
 
-func (_server) GetVehicleCustomPrimaryColour(vehicle float64) (float64, float64, float64) {
-	return 0.0, 0.0, 0.0
-}
+func (_server) GetVehicleCustomPrimaryColour(vehicle float64) (float64, float64, float64)
 
-func (_server) GetVehicleCustomSecondaryColour(vehicle float64) (float64, float64, float64) {
-	return 0.0, 0.0, 0.0
-}
+func (_server) GetVehicleCustomSecondaryColour(vehicle float64) (float64, float64, float64)
 
-func (_server) GetVehicleDashboardColour(vehicle float64, color float64) float64 {
-	return 0.0
-}
+func (_server) GetVehicleDashboardColour(vehicle float64, color float64) float64
 
-func (_server) GetVehicleDirtLevel(vehicle float64) float64 {
-	return 0.0
-}
+func (_server) GetVehicleDirtLevel(vehicle float64) float64
 
 /**
  * enum VehicleLockStatus = {
@@ -916,77 +773,53 @@ func (_server) GetVehicleDirtLevel(vehicle float64) float64 {
  * CannotBeTriedToEnter = 10, -- Cannot be tried to enter (Nothing happens when you press the vehicle enter key).
  * }
  */
-func (_server) GetVehicleDoorLockStatus(vehicle float64) float64 {
-	return 0.0
-}
+func (_server) GetVehicleDoorLockStatus(vehicle float64) float64
 
-func (_server) GetVehicleDoorStatus(vehicle float64) float64 {
-	return 0.0
-}
+func (_server) GetVehicleDoorStatus(vehicle float64) float64
 
 /**
  * Currently it only works when set to "all players".
  */
-func (_server) GetVehicleDoorsLockedForPlayer(vehicle float64) float64 {
-	return 0.0
-}
+func (_server) GetVehicleDoorsLockedForPlayer(vehicle float64) float64
 
-func (_server) GetVehicleEngineHealth(vehicle float64) float64 {
-	return 0.0
-}
+func (_server) GetVehicleEngineHealth(vehicle float64) float64
 
-func (_server) GetVehicleExtraColours(vehicle float64) (float64, float64) { return 0.0, 0.0 }
+func (_server) GetVehicleExtraColours(vehicle float64) (float64, float64)
 
 /**
  * Gets the flight nozzel position for the specified vehicle. See the client-side [\_GET_VEHICLE_FLIGHT_NOZZLE_POSITION](#\_0xDA62027C8BDB326E) native for usage examples.
  * @param vehicle The vehicle to check.
  * @return The flight nozzel position between 0.0 (flying normally) and 1.0 (VTOL mode)
  */
-func (_server) GetVehicleFlightNozzlePosition(vehicle float64) float64 {
-	return 0.0
-}
+func (_server) GetVehicleFlightNozzlePosition(vehicle float64) float64
 
 func (_server) GetVehicleHandbrake(vehicle float64) bool
 
-func (_server) GetVehicleHeadlightsColour(vehicle float64) float64 {
-	return 0.0
-}
+func (_server) GetVehicleHeadlightsColour(vehicle float64) float64
 
 /**
  * Gets the lock on state for the specified vehicle. See the client-side [GET_VEHICLE_HOMING_LOCKON_STATE](#\_0xE6B0E8CFC3633BF0) native for a description of lock on states.
  * @param vehicle The vehicle to check.
  * @return The lock on state.
  */
-func (_server) GetVehicleHomingLockonState(vehicle float64) float64 {
-	return 0.0
-}
+func (_server) GetVehicleHomingLockonState(vehicle float64) float64
 
-func (_server) GetVehicleInteriorColour(vehicle float64, color float64) float64 {
-	return 0.0
-}
+func (_server) GetVehicleInteriorColour(vehicle float64, color float64) float64
 
-func (_server) GetVehicleLightsState(vehicle float64) (bool, interface{}, interface{}) {
-	return false, nil, nil
-}
+func (_server) GetVehicleLightsState(vehicle float64) (bool, interface{}, interface{})
 
-func (_server) GetVehicleLivery(vehicle float64) float64 {
-	return 0.0
-}
+func (_server) GetVehicleLivery(vehicle float64) float64
 
 /**
  * Gets the vehicle that is locked on to for the specified vehicle.
  * @param vehicle The vehicle to check.
  * @return The vehicle that is locked on. 0 returned if no vehicle is locked on.
  */
-func (_server) GetVehicleLockOnTarget(vehicle float64) float64 {
-	return 0.0
-}
+func (_server) GetVehicleLockOnTarget(vehicle float64) float64
 
 func (_server) GetVehicleNumberPlateText(vehicle float64) string
 
-func (_server) GetVehicleNumberPlateTextIndex(vehicle float64) float64 {
-	return 0.0
-}
+func (_server) GetVehicleNumberPlateTextIndex(vehicle float64) float64
 
 /**
  * Gets the vehicle the specified Ped is/was in depending on bool value. This native is used server side when using OneSync.
@@ -994,21 +827,13 @@ func (_server) GetVehicleNumberPlateTextIndex(vehicle float64) float64 {
  * @param lastVehicle False = CurrentVehicle, True = LastVehicle
  * @return The vehicle id. Returns 0 if the ped is/was not in a vehicle.
  */
-func (_server) GetVehiclePedIsIn(ped float64, lastVehicle bool) float64 {
-	return 0.0
-}
+func (_server) GetVehiclePedIsIn(ped float64, lastVehicle bool) float64
 
-func (_server) GetVehiclePetrolTankHealth(vehicle float64) float64 {
-	return 0.0
-}
+func (_server) GetVehiclePetrolTankHealth(vehicle float64) float64
 
-func (_server) GetVehicleRadioStationIndex(vehicle float64) float64 {
-	return 0.0
-}
+func (_server) GetVehicleRadioStationIndex(vehicle float64) float64
 
-func (_server) GetVehicleRoofLivery(vehicle float64) float64 {
-	return 0.0
-}
+func (_server) GetVehicleRoofLivery(vehicle float64) float64
 
 /**
  * Returns the type of the passed vehicle.
@@ -1026,31 +851,21 @@ func (_server) GetVehicleRoofLivery(vehicle float64) float64 {
  */
 func (_server) GetVehicleType(vehicle float64) string
 
-func (_server) GetVehicleTyreSmokeColor(vehicle float64) (float64, float64, float64) {
-	return 0.0, 0.0, 0.0
-}
+func (_server) GetVehicleTyreSmokeColor(vehicle float64) (float64, float64, float64)
 
-func (_server) GetVehicleWheelType(vehicle float64) float64 {
-	return 0.0
-}
+func (_server) GetVehicleWheelType(vehicle float64) float64
 
-func (_server) GetVehicleWindowTint(vehicle float64) float64 {
-	return 0.0
-}
+func (_server) GetVehicleWindowTint(vehicle float64) float64
 
-func (_server) GiveWeaponComponentToPed(ped float64, weaponHash interface{}, componentHash interface{}) {
-}
+func (_server) GiveWeaponComponentToPed(ped float64, weaponHash interface{}, componentHash interface{})
 
-func (_server) GiveWeaponToPed(ped float64, weaponHash interface{}, ammoCount float64, isHidden bool, bForceInHand bool) {
-}
+func (_server) GiveWeaponToPed(ped float64, weaponHash interface{}, ammoCount float64, isHidden bool, bForceInHand bool)
 
 func (_server) HasEntityBeenMarkedAsNoLongerNeeded(vehicle float64) bool
 
 func (_server) HasVehicleBeenOwnedByPlayer(vehicle float64) bool
 
-func (_server) InvokeFunctionReference(referenceIdentity string, argsSerialized string, argsLength float64, retvalLength float64) (string, float64) {
-	return "", 0.0
-}
+func (_server) InvokeFunctionReference(referenceIdentity string, argsSerialized string, argsLength float64, retvalLength float64) (string, float64)
 
 func (_server) IsAceAllowed(object string) bool
 
@@ -1113,13 +928,13 @@ func (_server) IsVehicleTyreBurst(vehicle float64, wheelID float64, completely b
  * Requests the commerce data for the specified player, including the owned SKUs. Use `IS_PLAYER_COMMERCE_INFO_LOADED` to check if it has loaded.
  * @param playerSrc The player handle
  */
-func (_server) LoadPlayerCommerceData(playerSrc string) {}
+func (_server) LoadPlayerCommerceData(playerSrc string)
 
 /**
  * Requests the commerce data from Tebex for the specified player, including the owned SKUs. Use `IS_PLAYER_COMMERCE_INFO_LOADED` to check if it has loaded.
  * @param playerSrc The player handle
  */
-func (_server) LoadPlayerCommerceDataExt(playerSrc string) {}
+func (_server) LoadPlayerCommerceDataExt(playerSrc string)
 
 /**
  * Reads the contents of a text file in a specified resource.
@@ -1135,61 +950,49 @@ func (_server) LoadResourceFile(resourceName string, fileName string) string
  * Create a permanent voice channel.
  * @param id ID of the channel.
  */
-func (_server) MumbleCreateChannel(id float64) {}
+func (_server) MumbleCreateChannel(id float64)
 
-func (_server) NetworkGetEntityFromNetworkId(netId float64) float64 {
-	return 0.0
-}
+func (_server) NetworkGetEntityFromNetworkId(netId float64) float64
 
 /**
  * Returns the owner ID of the specified entity.
  * @param entity The entity to get the owner for.
  * @return On the server, the server ID of the entity owner. On the client, returns the player/slot ID of the entity owner.
  */
-func (_server) NetworkGetEntityOwner(entity float64) float64 {
-	return 0.0
-}
+func (_server) NetworkGetEntityOwner(entity float64) float64
 
 /**
  * Returns the first owner ID of the specified entity.
  * @param entity The entity to get the first owner for.
  * @return The server ID of the first entity owner.
  */
-func (_server) NetworkGetFirstEntityOwner(entity float64) float64 {
-	return 0.0
-}
+func (_server) NetworkGetFirstEntityOwner(entity float64) float64
 
-func (_server) NetworkGetNetworkIdFromEntity(entity float64) float64 {
-	return 0.0
-}
+func (_server) NetworkGetNetworkIdFromEntity(entity float64) float64
 
-func (_server) NetworkGetVoiceProximityOverride(playerSrc string) []float64 { return []float64{0.0} }
+func (_server) NetworkGetVoiceProximityOverride(playerSrc string) []float64
 
-func (_server) PerformHttpRequestInternal(requestData string, requestDataLength float64) float64 {
-	return 0.0
-}
+func (_server) PerformHttpRequestInternal(requestData string, requestDataLength float64) float64
 
-func (_server) PerformHttpRequestInternalEx(requestData interface{}) float64 {
-	return 0.0
-}
+func (_server) PerformHttpRequestInternalEx(requestData interface{}) float64
 
 /**
  * Prints 'structured trace' data to the server `file descriptor 3` channel. This is not generally useful outside of
  * server monitoring utilities.
  * @param jsonString JSON data to submit as `payload` in the `script_structured_trace` event.
  */
-func (_server) PrintStructuredTrace(jsonString string) {}
+func (_server) PrintStructuredTrace(jsonString string)
 
 /**
  * Scope entry for profiler.
  * @param scopeName Scope name.
  */
-func (_server) ProfilerEnterScope(scopeName string) {}
+func (_server) ProfilerEnterScope(scopeName string)
 
 /**
  * Scope exit for profiler.
  */
-func (_server) ProfilerExitScope() {}
+func (_server) ProfilerExitScope()
 
 /**
  * Returns true if the profiler is active.
@@ -1207,19 +1010,21 @@ func (_server) ProfilerIsRecording() bool
  * @param handler A handler function that gets called whenever the command is executed.
  * @param restricted If this is a server command and you set this to true, then players will need the command.yourCommandName ace permission to execute this command.
  */
-func (_server) RegisterCommand(commandName string, handler js.Func, restricted bool) {}
+func (_server) RegisterCommand(commandName string, handler js.Func, restricted bool) {
+	Global.Call("RegisterCommand", commandName, handler, restricted)
+}
 
 /**
  * Registers a listener for console output messages.
  * @param listener A function of `(channel string, message string) => void`. The message might contain `\n`.
  */
-func (_server) RegisterConsoleListener(listener js.Func) {}
+func (_server) RegisterConsoleListener(listener js.Func)
 
 /**
  * An internal function which allows the current resource's HLL script runtimes to receive state for the specified event.
  * @param eventName An event name, or "\*" to disable HLL event filtering for this resource.
  */
-func (_server) RegisterResourceAsEventHandler(eventName string) {}
+func (_server) RegisterResourceAsEventHandler(eventName string)
 
 /**
  * **Experimental**: This native may be altered or removed in future versions of CitizenFX without warning.
@@ -1245,12 +1050,12 @@ func (_server) RegisterResourceAsset(resourceName string, fileName string) strin
  * @param factoryId The identifier for the build task.
  * @param factoryFn The factory function.
  */
-func (_server) RegisterResourceBuildTaskFactory(factoryId string, factoryFn js.Func) {}
+func (_server) RegisterResourceBuildTaskFactory(factoryId string, factoryFn js.Func)
 
 /**
  * setting the last params to false it does that same so I would suggest its not a toggle
  */
-func (_server) RemoveAllPedWeapons(ped float64, p1 bool) {}
+func (_server) RemoveAllPedWeapons(ped float64, p1 bool)
 
 /**
  * In the C++ SDK, this seems not to work-- the blip isn't removed immediately. I use it for saving cars.
@@ -1273,17 +1078,16 @@ func (_server) RemoveAllPedWeapons(ped float64, p1 bool) {}
  * --
  * It crashes my game.
  */
-func (_server) RemoveBlip(blip float64) {}
+func (_server) RemoveBlip(blip float64)
 
 /**
  * **Experimental**: This native may be altered or removed in future versions of CitizenFX without warning.
  * Removes a handler for changes to a state bag.
  * @param cookie The cookie.
  */
-func (_server) RemoveStateBagChangeHandler(cookie float64) {}
+func (_server) RemoveStateBagChangeHandler(cookie float64)
 
-func (_server) RemoveWeaponComponentFromPed(ped float64, weaponHash interface{}, componentHash interface{}) {
-}
+func (_server) RemoveWeaponComponentFromPed(ped float64, weaponHash interface{}, componentHash interface{})
 
 /**
  * This native removes a specified weapon from your selected ped.
@@ -1295,7 +1099,7 @@ func (_server) RemoveWeaponComponentFromPed(ped float64, weaponHash interface{},
  * WEAPON::REMOVE_WEAPON_FROM_PED(PLAYER::PLAYER_PED_ID(), 0x99B507EA);
  * The code above removes the knife from the player.
  */
-func (_server) RemoveWeaponFromPed(ped float64, weaponHash interface{}) {}
+func (_server) RemoveWeaponFromPed(ped float64, weaponHash interface{})
 
 /**
  * Requests the specified player to buy the passed SKU. This'll pop up a prompt on the client, which upon acceptance
@@ -1303,7 +1107,7 @@ func (_server) RemoveWeaponFromPed(ped float64, weaponHash interface{}) {}
  * @param playerSrc The player handle
  * @param skuId The ID of the SKU.
  */
-func (_server) RequestPlayerCommerceSession(playerSrc string, skuId float64) {}
+func (_server) RequestPlayerCommerceSession(playerSrc string, skuId float64)
 
 /**
  * Writes the specified data to a file in the specified resource.
@@ -1320,7 +1124,7 @@ func (_server) SaveResourceFile(resourceName string, fileName string, data strin
  * Schedules the specified resource to run a tick as soon as possible, bypassing the server's fixed tick rate.
  * @param resourceName The resource to tick.
  */
-func (_server) ScheduleResourceTick(resourceName string) {}
+func (_server) ScheduleResourceTick(resourceName string)
 
 /**
  * <!--
@@ -1331,15 +1135,15 @@ func (_server) ScheduleResourceTick(resourceName string) {}
  * @param blip The blip to change.
  * @param spriteId The sprite ID to set.
  */
-func (_server) SetBlipSprite(blip float64, spriteId float64) {}
+func (_server) SetBlipSprite(blip float64, spriteId float64)
 
-func (_server) SetConvar(varName string, value string) {}
+func (_server) SetConvar(varName string, value string)
 
-func (_server) SetConvarReplicated(varName string, value string) {}
+func (_server) SetConvarReplicated(varName string, value string)
 
-func (_server) SetConvarServerInfo(varName string, value string) {}
+func (_server) SetConvarServerInfo(varName string, value string)
 
-func (_server) SetCurrentPedWeapon(ped float64, weaponHash interface{}, bForceInHand bool) {}
+func (_server) SetCurrentPedWeapon(ped float64, weaponHash interface{}, bForceInHand bool)
 
 /**
  * Sets the coordinates (world position) for a specified entity, offset by the radius of the entity on the Z axis.
@@ -1352,8 +1156,7 @@ func (_server) SetCurrentPedWeapon(ped float64, weaponHash interface{}, bForceIn
  * @param ragdollFlag A special flag used for ragdolling peds.
  * @param clearArea Whether to clear any entities in the target area.
  */
-func (_server) SetEntityCoords(entity float64, xPos float64, yPos float64, zPos float64, alive bool, deadFlag bool, ragdollFlag bool, clearArea bool) {
-}
+func (_server) SetEntityCoords(entity float64, xPos float64, yPos float64, zPos float64, alive bool, deadFlag bool, ragdollFlag bool, clearArea bool)
 
 /**
  * It overrides the default distance culling radius of an entity. Set to `0.0` to reset.
@@ -1361,17 +1164,16 @@ func (_server) SetEntityCoords(entity float64, xPos float64, yPos float64, zPos 
  * @param entity The entity handle to override the distance culling radius.
  * @param radius The new distance culling radius.
  */
-func (_server) SetEntityDistanceCullingRadius(entity float64, radius float64) {}
+func (_server) SetEntityDistanceCullingRadius(entity float64, radius float64)
 
 /**
  * Set the heading of an entity in degrees also known as "Yaw".
  * @param entity The entity to set the heading for.
  * @param heading The heading in degrees.
  */
-func (_server) SetEntityHeading(entity float64, heading float64) {}
+func (_server) SetEntityHeading(entity float64, heading float64)
 
-func (_server) SetEntityRotation(entity float64, pitch float64, roll float64, yaw float64, rotationOrder float64, p5 bool) {
-}
+func (_server) SetEntityRotation(entity float64, pitch float64, roll float64, yaw float64, rotationOrder float64, p5 bool)
 
 /**
  * Sets the routing bucket for the specified entity.
@@ -1379,32 +1181,32 @@ func (_server) SetEntityRotation(entity float64, pitch float64, roll float64, ya
  * @param entity The entity to set the routing bucket for.
  * @param bucket The bucket ID.
  */
-func (_server) SetEntityRoutingBucket(entity float64, bucket float64) {}
+func (_server) SetEntityRoutingBucket(entity float64, bucket float64)
 
 /**
  * Note that the third parameter(denoted as z) is "up and down" with positive numbers encouraging upwards movement.
  */
-func (_server) SetEntityVelocity(entity float64, x float64, y float64, z float64) {}
+func (_server) SetEntityVelocity(entity float64, x float64, y float64, z float64)
 
-func (_server) SetGameType(gametypeName string) {}
+func (_server) SetGameType(gametypeName string)
 
-func (_server) SetHttpHandler(handler js.Func) {}
+func (_server) SetHttpHandler(handler js.Func)
 
-func (_server) SetMapName(mapName string) {}
+func (_server) SetMapName(mapName string)
 
 /**
  * NativeDB Added Parameter 4: BOOL p3
  */
-func (_server) SetPedAmmo(ped float64, weaponHash interface{}, ammo float64) {}
+func (_server) SetPedAmmo(ped float64, weaponHash interface{}, ammo float64)
 
 /**
  * Sets the armor of the specified ped.
  * ped: The Ped to set the armor of.
  * amount: A value between 0 and 100 indicating the value to set the Ped's armor to.
  */
-func (_server) SetPedArmour(ped float64, amount float64) {}
+func (_server) SetPedArmour(ped float64, amount float64)
 
-func (_server) SetPedCanRagdoll(ped float64, toggle bool) {}
+func (_server) SetPedCanRagdoll(ped float64, toggle bool)
 
 /**
  * This native is used to set component variation on a ped. Components, drawables and textures IDs are related to the ped model.
@@ -1431,8 +1233,7 @@ func (_server) SetPedCanRagdoll(ped float64, toggle bool) {}
  * @param textureId The texture id of the drawable.
  * @param paletteId 0 to 3.
  */
-func (_server) SetPedComponentVariation(ped float64, componentId float64, drawableId float64, textureId float64, paletteId float64) {
-}
+func (_server) SetPedComponentVariation(ped float64, componentId float64, drawableId float64, textureId float64, paletteId float64)
 
 /**
  * cpp
@@ -1898,12 +1699,12 @@ func (_server) SetPedComponentVariation(ped float64, componentId float64, drawab
  * _0x4BD5EBAD = 457,
  * }
  */
-func (_server) SetPedConfigFlag(ped float64, flagId float64, value bool) {}
+func (_server) SetPedConfigFlag(ped float64, flagId float64, value bool)
 
 /**
  * Sets Ped Default Clothes
  */
-func (_server) SetPedDefaultComponentVariation(ped float64) {}
+func (_server) SetPedDefaultComponentVariation(ped float64)
 
 /**
  * Used for freemode (online) characters.
@@ -1939,7 +1740,7 @@ func (_server) SetPedDefaultComponentVariation(ped float64) {}
  * 29. white small pupil
  * 30. glossed over
  */
-func (_server) SetPedEyeColor(ped float64, index float64) {}
+func (_server) SetPedEyeColor(ped float64, index float64)
 
 /**
  * Sets the various freemode face features, e.g. nose length, chin shape. Scale ranges from -1.0 to 1.0.
@@ -1968,12 +1769,12 @@ func (_server) SetPedEyeColor(ped float64, index float64) {}
  * Chimp_Hole
  * Neck_Thikness
  */
-func (_server) SetPedFaceFeature(ped float64, index float64, scale float64) {}
+func (_server) SetPedFaceFeature(ped float64, index float64, scale float64)
 
 /**
  * Used for freemode (online) characters.
  */
-func (_server) SetPedHairColor(ped float64, colorID float64, highlightColorID float64) {}
+func (_server) SetPedHairColor(ped float64, colorID float64, highlightColorID float64)
 
 /**
  * The "shape" parameters control the shape of the ped's face. The "skin" parameters control the skin tone. ShapeMix and skinMix control how much the first and second IDs contribute,(typically mother and father.) ThirdMix overrides the others in favor of the third IDs. IsParent is set for "children" of the player character's grandparents during old-gen character creation. It has unknown effect otherwise.
@@ -1987,8 +1788,7 @@ func (_server) SetPedHairColor(ped float64, colorID float64, highlightColorID fl
  * For more info please refer to this topic.
  * gtaforums.com/topic/858970-all-gtao-face-ids-pedset-ped-head-blend-data-explained
  */
-func (_server) SetPedHeadBlendData(ped float64, shapeFirstID float64, shapeSecondID float64, shapeThirdID float64, skinFirstID float64, skinSecondID float64, skinThirdID float64, shapeMix float64, skinMix float64, thirdMix float64, isParent bool) {
-}
+func (_server) SetPedHeadBlendData(ped float64, shapeFirstID float64, shapeSecondID float64, shapeThirdID float64, skinFirstID float64, skinSecondID float64, skinThirdID float64, shapeMix float64, skinMix float64, thirdMix float64, isParent bool)
 
 /**
  * OverlayID ranges from 0 to 12, index from 0 to _GET_NUM_OVERLAY_VALUES(overlayID)-1, and opacity from 0.0 to 1.0.
@@ -2007,17 +1807,16 @@ func (_server) SetPedHeadBlendData(ped float64, shapeFirstID float64, shapeSecon
  * 11              Body Blemishes        0 - 11, 255
  * 12              Add Body Blemishes    0 - 1, 255
  */
-func (_server) SetPedHeadOverlay(ped float64, overlayID float64, index float64, opacity float64) {}
+func (_server) SetPedHeadOverlay(ped float64, overlayID float64, index float64, opacity float64)
 
 /**
  * Used for freemode (online) characters.
  * ColorType is 1 for eyebrows, beards, and chest hair; 2 for blush and lipstick; and 0 otherwise, though not called in those cases.
  * Called after SET_PED_HEAD_OVERLAY().
  */
-func (_server) SetPedHeadOverlayColor(ped float64, overlayID float64, colorType float64, colorID float64, secondColorID float64) {
-}
+func (_server) SetPedHeadOverlayColor(ped float64, overlayID float64, colorType float64, colorID float64, secondColorID float64)
 
-func (_server) SetPedIntoVehicle(ped float64, vehicle float64, seatIndex float64) {}
+func (_server) SetPedIntoVehicle(ped float64, vehicle float64, seatIndex float64)
 
 /**
  * This native is used to set prop variation on a ped. Components, drawables and textures IDs are related to the ped model.
@@ -2037,27 +1836,26 @@ func (_server) SetPedIntoVehicle(ped float64, vehicle float64, seatIndex float64
  * @param textureId The texture id of the drawable.
  * @param attach Attached or not.
  */
-func (_server) SetPedPropIndex(ped float64, componentId float64, drawableId float64, textureId float64, attach bool) {
-}
+func (_server) SetPedPropIndex(ped float64, componentId float64, drawableId float64, textureId float64, attach bool)
 
 /**
  * p1 is always 0 in R* scripts; and a quick disassembly seems to indicate that p1 is unused.
  * List of component/props ID:
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  */
-func (_server) SetPedRandomComponentVariation(ped float64, p1 float64) {}
+func (_server) SetPedRandomComponentVariation(ped float64, p1 float64)
 
 /**
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  */
-func (_server) SetPedRandomProps(ped float64) {}
+func (_server) SetPedRandomProps(ped float64)
 
 /**
  * PED::SET_PED_RESET_FLAG(PLAYER::PLAYER_PED_ID(), 240, 1);
  * Known values:
  */
-func (_server) SetPedResetFlag(ped float64, flagId float64, doReset bool) {}
+func (_server) SetPedResetFlag(ped float64, flagId float64, doReset bool)
 
 /**
  * p4/p5: Unusued in TU27
@@ -2067,8 +1865,7 @@ func (_server) SetPedResetFlag(ped float64, flagId float64, doReset bool) {}
  * **Else**: CTaskNMBalance
  * @param time1 Time(ms) Ped is in ragdoll mode; only applies to ragdoll types 0 and not 1.
  */
-func (_server) SetPedToRagdoll(ped float64, time1 float64, time2 float64, ragdollType float64, p4 bool, p5 bool, p6 bool) {
-}
+func (_server) SetPedToRagdoll(ped float64, time1 float64, time2 float64, ragdollType float64, p4 bool, p5 bool, p6 bool)
 
 /**
  * Return variable is never used in R*'s scripts.
@@ -2079,8 +1876,7 @@ func (_server) SetPedToRagdoll(ped float64, time1 float64, time2 float64, ragdol
  * (Simplified) Example of the usage of the function from R*'s scripts:
  * ped::set_ped_to_ragdoll_with_fall(ped, 1500, 2000, 1, -entity::get_entity_forward_vector(ped), 1f, 0f, 0f, 0f, 0f, 0f, 0f);
  */
-func (_server) SetPedToRagdollWithFall(ped float64, time float64, p2 float64, ragdollType float64, x float64, y float64, z float64, p7 float64, p8 float64, p9 float64, p10 float64, p11 float64, p12 float64, p13 float64) {
-}
+func (_server) SetPedToRagdollWithFall(ped float64, time float64, p2 float64, ragdollType float64, x float64, y float64, z float64, p7 float64, p8 float64, p9 float64, p10 float64, p11 float64, p12 float64, p13 float64)
 
 /**
  * Flags:
@@ -2098,7 +1894,7 @@ func (_server) SetPedToRagdollWithFall(ped float64, time float64, p2 float64, ra
  * SPC_ALLOW_PAD_SHAKE = (1 << 12)
  * See: https://alloc8or.re/gta5/doc/enums/eSetPlayerControlFlag.txt
  */
-func (_server) SetPlayerControl(player string, bHasControl bool, flags float64) {}
+func (_server) SetPlayerControl(player string, bHasControl bool, flags float64)
 
 /**
  * Sets the culling radius for the specified player.
@@ -2106,20 +1902,20 @@ func (_server) SetPlayerControl(player string, bHasControl bool, flags float64) 
  * @param playerSrc The player to set the culling radius for.
  * @param radius The radius.
  */
-func (_server) SetPlayerCullingRadius(playerSrc string, radius float64) {}
+func (_server) SetPlayerCullingRadius(playerSrc string, radius float64)
 
 /**
  * Simply sets you as invincible (Health will not deplete).
  * Use 0x733A643B5B0C53C1 instead if you want Ragdoll enabled, which is equal to:
  * *(DWORD *)(playerPedAddress + 0x188) |= (1 << 9);
  */
-func (_server) SetPlayerInvincible(player string, toggle bool) {}
+func (_server) SetPlayerInvincible(player string, toggle bool)
 
 /**
  * Set the model for a specific Player. Be aware that this will destroy the current Ped for the Player and create a new one, any reference to the old ped should be reset
  * Make sure to request the model first and wait until it has loaded.
  */
-func (_server) SetPlayerModel(player string, model interface{}) {}
+func (_server) SetPlayerModel(player string, model interface{})
 
 /**
  * Sets the routing bucket for the specified player.
@@ -2127,56 +1923,56 @@ func (_server) SetPlayerModel(player string, model interface{}) {}
  * @param playerSrc The player to set the routing bucket for.
  * @param bucket The bucket ID.
  */
-func (_server) SetPlayerRoutingBucket(playerSrc string, bucket float64) {}
+func (_server) SetPlayerRoutingBucket(playerSrc string, bucket float64)
 
 /**
  * Call SET_PLAYER_WANTED_LEVEL_NOW for immediate effect
  * wantedLevel is an integer value representing 0 to 5 stars even though the game supports the 6th wanted level but no police will appear since no definitions are present for it in the game files
  * disableNoMission-  Disables When Off Mission- appears to always be false
  */
-func (_server) SetPlayerWantedLevel(player string, wantedLevel float64, disableNoMission bool) {}
+func (_server) SetPlayerWantedLevel(player string, wantedLevel float64, disableNoMission bool)
 
 /**
  * A setter for [GET_RESOURCE_KVP_STRING](#\_0x5240DA5A).
  * @param key The key to set
  * @param value The value to write
  */
-func (_server) SetResourceKvp(key string, value string) {}
+func (_server) SetResourceKvp(key string, value string)
 
 /**
  * A setter for [GET_RESOURCE_KVP_FLOAT](#\_0x35BDCEEA).
  * @param key The key to set
  * @param value The value to write
  */
-func (_server) SetResourceKvpFloat(key string, value float64) {}
+func (_server) SetResourceKvpFloat(key string, value float64)
 
 /**
  * Nonsynchronous [SET_RESOURCE_KVP_FLOAT](#\_0x9ADD2938) operation; see [FLUSH_RESOURCE_KVP](#\_0x5240DA5A).
  * @param key The key to set
  * @param value The value to write
  */
-func (_server) SetResourceKvpFloatNoSync(key string, value float64) {}
+func (_server) SetResourceKvpFloatNoSync(key string, value float64)
 
 /**
  * A setter for [GET_RESOURCE_KVP_INT](#\_0x557B586A).
  * @param key The key to set
  * @param value The value to write
  */
-func (_server) SetResourceKvpInt(key string, value float64) {}
+func (_server) SetResourceKvpInt(key string, value float64)
 
 /**
  * Nonsynchronous [SET_RESOURCE_KVP_INT](#\_0x6A2B1E8) operation; see [FLUSH_RESOURCE_KVP](#\_0x5240DA5A).
  * @param key The key to set
  * @param value The value to write
  */
-func (_server) SetResourceKvpIntNoSync(key string, value float64) {}
+func (_server) SetResourceKvpIntNoSync(key string, value float64)
 
 /**
  * Nonsynchronous [SET_RESOURCE_KVP](#\_0x21C7A35B) operation; see [FLUSH_RESOURCE_KVP](#\_0x5240DA5A).
  * @param key The key to set
  * @param value The value to write
  */
-func (_server) SetResourceKvpNoSync(key string, value string) {}
+func (_server) SetResourceKvpNoSync(key string, value string)
 
 /**
  * Sets the entity lockdown mode for a specific routing bucket.
@@ -2189,27 +1985,26 @@ func (_server) SetResourceKvpNoSync(key string, value string) {}
  * @param bucketId The routing bucket ID to adjust.
  * @param mode One of aforementioned modes.
  */
-func (_server) SetRoutingBucketEntityLockdownMode(bucketId float64, mode string) {}
+func (_server) SetRoutingBucketEntityLockdownMode(bucketId float64, mode string)
 
 /**
  * Sets whether or not the specified routing bucket has automatically-created population enabled.
  * @param bucketId The routing bucket ID to adjust.
  * @param mode `true` to enable population, `false` to disable population.
  */
-func (_server) SetRoutingBucketPopulationEnabled(bucketId float64, mode bool) {}
+func (_server) SetRoutingBucketPopulationEnabled(bucketId float64, mode bool)
 
 /**
  * Internal function for setting a state bag value.
  */
-func (_server) SetStateBagValue(bagName string, keyName string, valueData string, valueLength float64, replicated bool) {
-}
+func (_server) SetStateBagValue(bagName string, keyName string, valueData string, valueLength float64, replicated bool)
 
-func (_server) SetVehicleAlarm(vehicle float64, state bool) {}
+func (_server) SetVehicleAlarm(vehicle float64, state bool)
 
 /**
  * p2 often set to 1000.0 in the decompiled scripts.
  */
-func (_server) SetVehicleBodyHealth(vehicle float64, value float64) {}
+func (_server) SetVehicleBodyHealth(vehicle float64, value float64)
 
 /**
  * Sets the selected vehicle's colors to their default value (specific variant specified using the colorCombination parameter).
@@ -2217,35 +2012,35 @@ func (_server) SetVehicleBodyHealth(vehicle float64, value float64) {}
  * @param vehicle The vehicle to modify.
  * @param colorCombination One of the default color values of the vehicle.
  */
-func (_server) SetVehicleColourCombination(vehicle float64, colorCombination float64) {}
+func (_server) SetVehicleColourCombination(vehicle float64, colorCombination float64)
 
 /**
  * colorPrimary & colorSecondary are the paint indexes for the vehicle.
  * For a list of valid paint indexes, view: pastebin.com/pwHci0xK
  */
-func (_server) SetVehicleColours(vehicle float64, colorPrimary float64, colorSecondary float64) {}
+func (_server) SetVehicleColours(vehicle float64, colorPrimary float64, colorSecondary float64)
 
 /**
  * p1, p2, p3 are RGB values for color (255,0,0 for Red, ect)
  */
-func (_server) SetVehicleCustomPrimaryColour(vehicle float64, r float64, g float64, b float64) {}
+func (_server) SetVehicleCustomPrimaryColour(vehicle float64, r float64, g float64, b float64)
 
 /**
  * p1, p2, p3 are RGB values for color (255,0,0 for Red, ect)
  */
-func (_server) SetVehicleCustomSecondaryColour(vehicle float64, r float64, g float64, b float64) {}
+func (_server) SetVehicleCustomSecondaryColour(vehicle float64, r float64, g float64, b float64)
 
 /**
  * Sets the dirt level of the passed vehicle.
  * @param vehicle The vehicle to set.
  * @param dirtLevel A number between 0.0 and 15.0 representing the vehicles dirt level.
  */
-func (_server) SetVehicleDirtLevel(vehicle float64, dirtLevel float64) {}
+func (_server) SetVehicleDirtLevel(vehicle float64, dirtLevel float64)
 
 /**
  * See eDoorId declared in [`SET_VEHICLE_DOOR_SHUT`](#\_0x93D9BD300D7789E5)
  */
-func (_server) SetVehicleDoorBroken(vehicle float64, doorIndex float64, deleteDoor bool) {}
+func (_server) SetVehicleDoorBroken(vehicle float64, doorIndex float64, deleteDoor bool)
 
 /**
  * // Source GTA VC miss2 leak, matching constants for 0/2/4, testing
@@ -2261,13 +2056,11 @@ func (_server) SetVehicleDoorBroken(vehicle float64, doorIndex float64, deleteDo
  * CARLOCK_LOCKED_BUT_CAN_BE_DAMAGED = 7
  * };
  */
-func (_server) SetVehicleDoorsLocked(vehicle float64, doorLockStatus float64) {}
+func (_server) SetVehicleDoorsLocked(vehicle float64, doorLockStatus float64)
 
-func (_server) SetVehicleNumberPlateText(vehicle float64, plateText string) {}
+func (_server) SetVehicleNumberPlateText(vehicle float64, plateText string)
 
-func (_server) StartFindKvp(prefix string) float64 {
-	return 0.0
-}
+func (_server) StartFindKvp(prefix string) float64
 
 func (_server) StartResource(resourceName string) bool
 
@@ -2278,7 +2071,7 @@ func (_server) StopResource(resourceName string) bool
  * p2 should be 0
  * p3 should be 16
  */
-func (_server) TaskCombatPed(ped float64, targetPed float64, p2 float64, p3 float64) {}
+func (_server) TaskCombatPed(ped float64, targetPed float64, p2 float64, p3 float64)
 
 /**
  * Example:
@@ -2288,8 +2081,7 @@ func (_server) TaskCombatPed(ped float64, targetPed float64, p2 float64, p3 floa
  * I marked p6 as distanceToShoot as if you think of GTA's Logic with the native SET_VEHICLE_SHOOT natives, it won't shoot till it gets within a certain distance of the target.
  * I marked p7 as pedAccuracy as it seems it's mostly 100 (Completely Accurate), 75, 90, etc. Although this could be the ammo count within the gun, but I highly doubt it. I will change this comment once I find out if it's ammo count or not.
  */
-func (_server) TaskDriveBy(driverPed float64, targetPed float64, targetVehicle float64, targetX float64, targetY float64, targetZ float64, distanceToShoot float64, pedAccuracy float64, p8 bool, firingPattern interface{}) {
-}
+func (_server) TaskDriveBy(driverPed float64, targetPed float64, targetVehicle float64, targetX float64, targetY float64, targetZ float64, distanceToShoot float64, pedAccuracy float64, p8 bool, firingPattern interface{})
 
 /**
  * speed 1.0 = walk, 2.0 = run
@@ -2297,20 +2089,17 @@ func (_server) TaskDriveBy(driverPed float64, targetPed float64, targetVehicle f
  * p6 is always 0
  * @param seatIndex See eSeatPosition declared in [`IS_VEHICLE_SEAT_FREE`](#\_0x22AC59A870E6A669).
  */
-func (_server) TaskEnterVehicle(ped float64, vehicle float64, timeout float64, seatIndex float64, speed float64, flag float64, p6 float64) {
-}
+func (_server) TaskEnterVehicle(ped float64, vehicle float64, timeout float64, seatIndex float64, speed float64, flag float64, p6 float64)
 
-func (_server) TaskEveryoneLeaveVehicle(vehicle float64) {}
+func (_server) TaskEveryoneLeaveVehicle(vehicle float64)
 
-func (_server) TaskGoStraightToCoord(ped float64, x float64, y float64, z float64, speed float64, timeout float64, targetHeading float64, distanceToSlide float64) {
-}
+func (_server) TaskGoStraightToCoord(ped float64, x float64, y float64, z float64, speed float64, timeout float64, targetHeading float64, distanceToSlide float64)
 
 /**
  * example from fm_mission_controller
  * TASK::TASK_GO_TO_COORD_ANY_MEANS(l_649, sub_f7e86(-1, 0), 1.0, 0, 0, 786603, 0xbf800000);
  */
-func (_server) TaskGoToCoordAnyMeans(ped float64, x float64, y float64, z float64, speed float64, p5 float64, p6 bool, walkingStyle float64, p8 float64) {
-}
+func (_server) TaskGoToCoordAnyMeans(ped float64, x float64, y float64, z float64, speed float64, p5 float64, p6 bool, walkingStyle float64, p8 float64)
 
 /**
  * The entity will move towards the target until time is over (duration) or get in target's range (distance). p5 and p6 are unknown, but you could leave p5 = 1073741824 or 100 or even 0 (didn't see any difference but on the decompiled scripts, they use 1073741824 mostly) and p6 = 0
@@ -2318,20 +2107,19 @@ func (_server) TaskGoToCoordAnyMeans(ped float64, x float64, y float64, z float6
  * Example: TASK::TASK_GO_TO_ENTITY(pedHandle, vehicleHandle, 5000, 4.0, 100, 1073741824, 0)
  * Ped will run towards the vehicle for 5 seconds and stop when time is over or when he gets 4 meters(?) around the vehicle (with duration = -1, the task duration will be ignored).
  */
-func (_server) TaskGoToEntity(entity float64, target float64, duration float64, distance float64, speed float64, p5 float64, p6 float64) {
-}
+func (_server) TaskGoToEntity(entity float64, target float64, duration float64, distance float64, speed float64, p5 float64, p6 float64)
 
 /**
  * In the scripts, p3 was always -1.
  * p3 seems to be duration or timeout of turn animation.
  * Also facingPed can be 0 or -1 so ped will just raise hands up.
  */
-func (_server) TaskHandsUp(ped float64, duration float64, facingPed float64, p3 float64, p4 bool) {}
+func (_server) TaskHandsUp(ped float64, duration float64, facingPed float64, p3 float64, p4 bool)
 
 /**
  * Flags are the same flags used in [`TASK_LEAVE_VEHICLE`](#\_0xD3DBCE61A490BE02)
  */
-func (_server) TaskLeaveAnyVehicle(ped float64, p1 float64, flags float64) {}
+func (_server) TaskLeaveAnyVehicle(ped float64, p1 float64, flags float64)
 
 /**
  * Flags from decompiled scripts:
@@ -2344,7 +2132,7 @@ func (_server) TaskLeaveAnyVehicle(ped float64, p1 float64, flags float64) {}
  * 262144 = ped moves to passenger seat first, then exits normally
  * Others to be tried out: 320, 512, 131072.
  */
-func (_server) TaskLeaveVehicle(ped float64, vehicle float64, flags float64) {}
+func (_server) TaskLeaveVehicle(ped float64, vehicle float64, flags float64)
 
 /**
  * [Animations list](https://alexguirre.github.io/animations-list/)
@@ -2396,8 +2184,7 @@ func (_server) TaskLeaveVehicle(ped float64, vehicle float64, flags float64) {}
  * Can be 1 but only for MP
  * ```
  */
-func (_server) TaskPlayAnim(ped float64, animDictionary string, animationName string, blendInSpeed float64, blendOutSpeed float64, duration float64, flag float64, playbackRate float64, lockX bool, lockY bool, lockZ bool) {
-}
+func (_server) TaskPlayAnim(ped float64, animDictionary string, animationName string, blendInSpeed float64, blendOutSpeed float64, duration float64, flag float64, playbackRate float64, lockX bool, lockY bool, lockZ bool)
 
 /**
  * It's similar to the one above, except the first 6 floats let you specify the initial position and rotation of the task. (Ped gets teleported to the position).
@@ -2416,16 +2203,14 @@ func (_server) TaskPlayAnim(ped float64, animDictionary string, animationName st
  * @param duration Time in milliseconds
  * @param animTime Value between 0.0 and 1.0, lets you start an animation from the given point
  */
-func (_server) TaskPlayAnimAdvanced(ped float64, animDict string, animName string, posX float64, posY float64, posZ float64, rotX float64, rotY float64, rotZ float64, animEnterSpeed float64, animExitSpeed float64, duration float64, flag float64, animTime float64, p14 float64, p15 float64) {
-}
+func (_server) TaskPlayAnimAdvanced(ped float64, animDict string, animName string, posX float64, posY float64, posZ float64, rotX float64, rotY float64, rotZ float64, animEnterSpeed float64, animExitSpeed float64, duration float64, flag float64, animTime float64, p14 float64, p15 float64)
 
-func (_server) TaskReactAndFleePed(ped float64, fleeTarget float64) {}
+func (_server) TaskReactAndFleePed(ped float64, fleeTarget float64)
 
 /**
  * Firing Pattern Hash Information: https://pastebin.com/Px036isB
  */
-func (_server) TaskShootAtCoord(ped float64, x float64, y float64, z float64, duration float64, firingPattern interface{}) {
-}
+func (_server) TaskShootAtCoord(ped float64, x float64, y float64, z float64, duration float64, firingPattern interface{})
 
 /**
  * //this part of the code is to determine at which entity the player is aiming, for example if you want to create a mod where you give orders to peds
@@ -2437,29 +2222,26 @@ func (_server) TaskShootAtCoord(ped float64, x float64, y float64, z float64, du
  * in practical usage, getting the entity the player is aiming at and then task the peds to shoot at the entity, at a button press event would be better.
  * Firing Pattern Hash Information: https://pastebin.com/Px036isB
  */
-func (_server) TaskShootAtEntity(entity float64, target float64, duration float64, firingPattern interface{}) {
-}
+func (_server) TaskShootAtEntity(entity float64, target float64, duration float64, firingPattern interface{})
 
-func (_server) TaskWarpPedIntoVehicle(ped float64, vehicle float64, seatIndex float64) {}
+func (_server) TaskWarpPedIntoVehicle(ped float64, vehicle float64, seatIndex float64)
 
-func (_server) TempBanPlayer(playerSrc string, reason string) {}
+func (_server) TempBanPlayer(playerSrc string, reason string)
 
 /**
  * The backing function for TriggerClientEvent.
  */
-func (_server) TriggerClientEventInternal(eventName string, eventTarget string, eventPayload string, payloadLength float64) {
-}
+func (_server) TriggerClientEventInternal(eventName string, eventTarget string, eventPayload string, payloadLength float64)
 
 /**
  * The backing function for TriggerEvent.
  */
-func (_server) TriggerEventInternal(eventName string, eventPayload string, payloadLength float64) {}
+func (_server) TriggerEventInternal(eventName string, eventPayload string, payloadLength float64)
 
 /**
  * The backing function for TriggerLatentClientEvent.
  */
-func (_server) TriggerLatentClientEventInternal(eventName string, eventTarget string, eventPayload string, payloadLength float64, bps float64) {
-}
+func (_server) TriggerLatentClientEventInternal(eventName string, eventTarget string, eventPayload string, payloadLength float64, bps float64)
 
 func (_server) VerifyPasswordHash(password string, hash string) bool
 

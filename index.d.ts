@@ -14,23 +14,23 @@ interface ResultAsLong {}
 interface ResultAsObject {}
 
 type InputArgument =
-    string |
-    number |
-    IntPtrInitialized |
-    FloatPtrInitialized |
-    IntPtr |
-    FloatPtr |
-    VectorPtr |
-    ReturnResultAnyway |
-    ResultAsInteger |
-    ResultAsFloat |
-    ResultAsString |
-    ResultAsVector |
-    ResultAsLong |
-    ResultAsObject;
+    | string
+    | number
+    | IntPtrInitialized
+    | FloatPtrInitialized
+    | IntPtr
+    | FloatPtr
+    | VectorPtr
+    | ReturnResultAnyway
+    | ResultAsInteger
+    | ResultAsFloat
+    | ResultAsString
+    | ResultAsVector
+    | ResultAsLong
+    | ResultAsObject
 
 interface StateBagInterface {
-    [key: string]: any;
+    [key: string]: any
     set(key: string, value: any, replicated: boolean): void
 }
 
@@ -70,15 +70,25 @@ interface CitizenInterface {
     makeRefFunction(refFunction: Function): string
 }
 
-declare var Citizen: CitizenInterface;
+declare var Citizen: CitizenInterface
 
-declare function addRawEventListener(eventName: string, callback: Function): void
+declare function addRawEventListener(
+    eventName: string,
+    callback: Function
+): void
 
-declare function addEventListener(eventName: string, callback: Function, netSafe?: boolean): void
+declare function addEventListener(
+    eventName: string,
+    callback: Function,
+    netSafe?: boolean
+): void
 declare function on(eventName: string, callback: Function): void
 declare function AddEventHandler(eventName: string, callback: Function): void
 
-declare function addNetEventListener(eventName: string, callback: Function): void
+declare function addNetEventListener(
+    eventName: string,
+    callback: Function
+): void
 declare function onNet(eventName: string, callback: Function): void
 
 declare function emit(eventName: string, ...args: any[]): void
@@ -86,28 +96,48 @@ declare function TriggerEvent(eventName: string, ...args: any[]): void
 
 declare function emitNet(eventName: string, ...args: any[]): void
 declare function TriggerServerEvent(eventName: string, ...args: any[]): void
-declare function TriggerLatentServerEvent(eventName: string, bps: number, ...args: any[]): void
+declare function TriggerLatentServerEvent(
+    eventName: string,
+    bps: number,
+    ...args: any[]
+): void
 
-declare function getPlayerIdentifiers(player: number|string): string[]
-declare function getPlayerTokens(player: number|string): string[]
+declare function getPlayerIdentifiers(player: number | string): string[]
+declare function getPlayerTokens(player: number | string): string[]
 declare function getPlayers(): string[]
 
 declare function SendNUIMessage(data: any): void
 
-declare function emitNet(eventName: string, target: number|string, ...args: any[]): void
-declare function TriggerClientEvent(eventName: string, target: number|string, ...args: any[]): void
-declare function TriggerLatentClientEvent(eventName: string, target: number|string, bps: number, ...args: any[]): void
+declare function emitNet(
+    eventName: string,
+    target: number | string,
+    ...args: any[]
+): void
+declare function TriggerClientEvent(
+    eventName: string,
+    target: number | string,
+    ...args: any[]
+): void
+declare function TriggerLatentClientEvent(
+    eventName: string,
+    target: number | string,
+    bps: number,
+    ...args: any[]
+): void
 
-declare function removeEventListener(eventName: string, callback: Function): void
+declare function removeEventListener(
+    eventName: string,
+    callback: Function
+): void
 
 declare function setTick(callback: Function): number
 declare function clearTick(callback: number): void
 
-declare function NewStateBag(name: string) : StateBagInterface;
+declare function NewStateBag(name: string): StateBagInterface
 declare function Entity(entity: number): EntityInterface
-declare var GlobalState : StateBagInterface
-declare function Player(entity: number|string): EntityInterface
+declare var GlobalState: StateBagInterface
+declare function Player(entity: number | string): EntityInterface
 
-declare var exports: any;
+declare var exports: any
 
-declare var source: number;
+declare var source: number
