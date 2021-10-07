@@ -1,3 +1,5 @@
+// Cr. https://github.com/nlepage/golang-wasm/tree/master/js/bind
+// Cr. https://github.com/nlepage/golang-wasm/tree/master/js/bind
 package citizenfx
 
 import (

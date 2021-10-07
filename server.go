@@ -2,7 +2,7 @@ package citizenfx
 
 import "syscall/js"
 
-type _xxx struct {
+type _server struct {
 
 	/**
 	 * Adds a rectangular blip for the specified coordinates/area.

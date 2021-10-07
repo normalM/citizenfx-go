@@ -2,15 +2,12 @@ package citizenfx
 
 import "syscall/js"
 
-type _server struct {
-	GetCurrentResourceNamex func() string `js:"GetCurrentResourceName()"`
-}
 type _client struct {
 }
 
 var (
 	Global = js.Global()
-	Server = new(_xxx)
+	Server = new(_server)
 	Client = new(_client)
 )
 
