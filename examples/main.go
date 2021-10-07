@@ -17,7 +17,7 @@ func init() {
 }
 func main() {
 
-	cfx.Server.RegisterCommand("asd", fn(func(this js.Value, inputs []js.Value) interface{} {
+	cfx.Server.RegisterCommand("test", fn(func(this js.Value, inputs []js.Value) interface{} {
 
 		cfx.TriggerClientEvent(
 			"chat:addMessage",
