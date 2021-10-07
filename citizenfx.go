@@ -3,17 +3,24 @@ package citizenfx
 import "syscall/js"
 
 type _server struct {
+	GetCurrentResourceNamex func() string `js:"GetCurrentResourceName()"`
 }
 type _client struct {
 }
 
 var (
 	Global = js.Global()
-	Server = new(_server)
+	Server = new(_xxx)
 	Client = new(_client)
 )
 
+func init() {
+	if err := BindGlobals(Server); err != nil {
+		panic(err)
+	}
+}
 func AddRawEventListener(eventName string, callback js.Func) {
+
 	Global.Call("AddRawEventListener", eventName, callback)
 }
 
