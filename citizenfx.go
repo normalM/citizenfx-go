@@ -114,3 +114,7 @@ func Entity(entity float64) js.Value {
 func Player(entity interface{}) js.Value {
 	return Global.Call("Player", entity)
 }
+
+func Print(arg ...interface{}) {
+	Global.Get("console").Call("log", arg...)
+}
