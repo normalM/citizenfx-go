@@ -42,32 +42,28 @@ func OnNet(eventName string, callback js.Func) {
 
 }
 
-func Emit(eventName string, args ...interface{}) {
-	Global.Call("Emit", eventName, args)
+func Emit(args ...interface{}) {
+	Global.Call("Emit", args)
 
 }
 
-func TriggerEvent(eventName string, args ...interface{}) {
-	Global.Call("TriggerEvent", eventName, args)
+func TriggerEvent(args ...interface{}) {
+	Global.Call("TriggerEvent", args)
 
 }
 
-// func EmitNet(eventName string, args ...interface{}) {
+// func EmitNet(args ...interface{}) {
 // }
-func EmitNet(eventName string, target interface{}, args ...interface{}) {
-	if target == nil {
-		Global.Call("EmitNet", eventName, target, args)
-	} else {
-		Global.Call("EmitNet", eventName, args)
-	}
+func EmitNet(args ...interface{}) {
+	Global.Call("EmitNet", args...)
 
 }
-func TriggerServerEvent(eventName string, args ...interface{}) {
-	Global.Call("TriggerServerEvent", eventName, args)
+func TriggerServerEvent(args ...interface{}) {
+	Global.Call("TriggerServerEvent", args)
 
 }
-func TriggerLatentServerEvent(eventName string, bps float64, args ...interface{}) {
-	Global.Call("TriggerLatentServerEvent", eventName, bps, args)
+func TriggerLatentServerEvent(args ...interface{}) {
+	Global.Call("TriggerLatentServerEvent", args...)
 
 }
 
@@ -86,11 +82,11 @@ func SendNUIMessage(data interface{}) {
 	Global.Call("SendNUIMessage", data)
 }
 
-func TriggerClientEvent(eventName string, target interface{}, args ...interface{}) {
-	Global.Call("TriggerClientEvent", eventName, target, args)
+func TriggerClientEvent(args ...interface{}) {
+	Global.Call("TriggerClientEvent", args...)
 }
-func TriggerLatentClientEvent(eventName string, target interface{}, bps float64, args ...interface{}) {
-	Global.Call("TriggerLatentClientEvent", eventName, target, bps, args)
+func TriggerLatentClientEvent(args ...interface{}) {
+	Global.Call("TriggerLatentClientEvent", args...)
 }
 
 func RemoveEventListener(eventName string, callback js.Func) {
@@ -111,10 +107,7 @@ func NewStateBag(name string) js.Value {
 func Entity(entity float64) js.Value {
 	return Global.Call("Entity", entity)
 }
-func Player(entity interface{}) js.Value {
-	return Global.Call("Player", entity)
-}
-
+func Player(entity interface{}) js.Value
 func Print(arg ...interface{}) {
 	Global.Get("console").Call("log", arg...)
 }
