@@ -107,7 +107,9 @@ func NewStateBag(name string) js.Value {
 func Entity(entity float64) js.Value {
 	return Global.Call("Entity", entity)
 }
-func Player(entity interface{}) js.Value
+func Player(entity interface{}) js.Value {
+	return Global.Call("Player", entity)
+}
 func Print(arg ...interface{}) {
 	Global.Get("console").Call("log", arg...)
 }
